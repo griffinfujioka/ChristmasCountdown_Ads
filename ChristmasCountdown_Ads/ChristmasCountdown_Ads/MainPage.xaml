@@ -28,7 +28,7 @@
         </TextBlock>
         <TextBlock x:Name="Countdown" Canvas.Left="539" TextWrapping="Wrap" Canvas.Top="177" Height="369" Width="399" FontSize="72" FontFamily="DilleniaUPC" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
         <TextBlock x:Name="textBlock" Canvas.Left="683" TextWrapping="Wrap" Text="About" Canvas.Top="669" FontSize="24" Tapped="TextBlock_Tapped_1" RenderTransformOrigin="-0.046,-0.103"/>
-        <UI:AdControl x:Name="adControl" HorizontalAlignment="Left" Height="62" Margin="604,123,0,0" VerticalAlignment="Top" Width="250" ApplicationId="6bd9e733-98ef-44a3-8d3c-999e45318968" AdUnitId="102124"/>
+        <UI:AdControl x:Name="adControl" Height="62" Margin="20,23,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250" ApplicationId="6bd9e733-98ef-44a3-8d3c-999e45318968" AdUnitId="102124"/>
 
 
 
@@ -91,11 +91,39 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>619,696,0,0</Thickness>
+                                    <Thickness>584,0,532,68</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
                         <DoubleAnimation Duration="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="adControl" d:IsOptimized="True" To="1"/>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="adControl">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <HorizontalAlignment>Stretch</HorizontalAlignment>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="adControl">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <x:Double>NaN</x:Double>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="adControl">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <VerticalAlignment>Bottom</VerticalAlignment>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="adControl">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <x:Double>62</x:Double>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
                 <VisualState x:Name="Filled">
@@ -274,7 +302,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>10,722,0,0</Thickness>
+                                    <Thickness>10,642,0,0</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>

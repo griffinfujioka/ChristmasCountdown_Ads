@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="5470397b-9562-4caa-9acd-af7e7348047d" Publisher="CN=Griffin" Version="1.0.0.0" />
+  <Identity Name="36726GriffinFujioka.ChristmasCountdownad-supported" Publisher="CN=7A2280AF-F3B0-499B-A221-E1F53BF165FF" Version="1.0.0.1" />
   <Properties>
-    <DisplayName>ChristmasCountdown_Ads</DisplayName>
-    <PublisherDisplayName>Griffin</PublisherDisplayName>
+    <DisplayName>Christmas Countdown ad-supported</DisplayName>
+    <PublisherDisplayName>Griffin Fujioka</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -15,13 +15,10 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ChristmasCountdown_Ads.App">
-      <VisualElements DisplayName="ChristmasCountdown_Ads" Logo="Assets\Christmas Countdown Logo Icon.png" SmallLogo="Assets\Christmas Countdown Small Logo.png" Description="ChristmasCountdown_Ads" ForegroundText="light" BackgroundColor="#B22222">
+      <VisualElements DisplayName="Christmas Countdown ad-supported" Logo="Assets\Christmas Countdown Logo Icon.png" SmallLogo="Assets\Christmas Countdown Small Logo.png" Description="ChristmasCountdown_Ads" ForegroundText="light" BackgroundColor="#B22222">
         <DefaultTile ShowName="allLogos" WideLogo="Assets\Christmas Countdown Wide Logo.png" />
         <SplashScreen Image="Assets\Christmas Countdown Splash Screen.png" BackgroundColor="#B22222" />
       </VisualElements>
     </Application>
   </Applications>
-  <Capabilities>
-    <Capability Name="internetClient" />
-  </Capabilities>
 </Package>
