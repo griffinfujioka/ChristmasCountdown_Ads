@@ -13,23 +13,23 @@
     
 
             <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-                <Button x:Name="backButton"  IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Margin="51,0,0,666"/>
+
+        <Button x:Name="backButton"  IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}" Margin="51,0,0,666"/>
                 <TextBlock x:Name="pageTitle" Style="{StaticResource PageHeaderTextStyle}" Text="" RenderTransformOrigin="0.5,0.5" Height="49" Margin="120,0,80,670"/>
                 <!--ContentPanel - place additional content here-->
                 <Canvas x:Name="ContentPanel" Height="768">
-                    <!--<Canvas.Background>
+            <!--<Canvas.Background>
                 <ImageBrush ImageSource="tree1.jpg"/>
             </Canvas.Background>-->
             
                 </Canvas>
 
-        <TextBlock x:Name="untilTxtBlock" Canvas.Left="520" Text="Until Christmas!" TextWrapping="NoWrap" Canvas.Top="551" Width="497" Height="95" FontSize="36" FontFamily="DilleniaUPC" HorizontalAlignment="Center" FontWeight="Bold">
+        <TextBlock x:Name="untilTxtBlock" Canvas.Left="520" Text="Until Christmas!" TextWrapping="NoWrap" Canvas.Top="551" Width="497" Height="95" FontSize="40" FontFamily="DilleniaUPC" HorizontalAlignment="Center" FontWeight="Bold">
         	
         </TextBlock>
-        <TextBlock x:Name="Countdown" Canvas.Left="539" TextWrapping="Wrap" Canvas.Top="177" Height="369" Width="399" FontSize="72" FontFamily="DilleniaUPC" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
-        <TextBlock x:Name="textBlock" Canvas.Left="683" TextWrapping="Wrap" Text="About" Canvas.Top="669" FontSize="24" Tapped="TextBlock_Tapped_1" RenderTransformOrigin="-0.046,-0.103"/>
-        <UI:AdControl x:Name="adControl" Height="62" Margin="20,23,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250" ApplicationId="6bd9e733-98ef-44a3-8d3c-999e45318968" AdUnitId="102124"/>
-
+        <TextBlock x:Name="Countdown" Canvas.Left="539" TextWrapping="Wrap" Canvas.Top="177" Height="369" Width="399" FontSize="72" FontFamily="DilleniaUPC" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlock" Canvas.Left="683" TextWrapping="Wrap" Text="About" Canvas.Top="669" FontSize="20" Tapped="TextBlock_Tapped_1" RenderTransformOrigin="-0.046,-0.103"/>
+        <UI:AdControl x:Name="adControl" ApplicationId="6bd9e733-98ef-44a3-8d3c-999e45318968 " AdUnitId="102124" Height="62" Canvas.Left="559" Canvas.Top="619" Width="250" Opacity="0"/>
 
 
         <VisualStateManager.VisualStateGroups>
@@ -41,15 +41,15 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="untilTxtBlock">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>510,421,407,252</Thickness>
+                                    <Thickness>510,481,407,192</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="untilTxtBlock" d:IsOptimized="True" To="96"/>
+                        <DoubleAnimation Duration="0" To="96" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="untilTxtBlock" d:IsOptimized="True"/>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>667,598,615,135</Thickness>
+                                    <Thickness>673,654,609,79</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -88,42 +88,21 @@
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="adControl">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>584,0,532,68</Thickness>
+                                    <x:Double>193</x:Double>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="adControl" d:IsOptimized="True" To="1"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="adControl">
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="adControl">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <HorizontalAlignment>Stretch</HorizontalAlignment>
+                                    <x:Double>487</x:Double>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>NaN</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.VerticalAlignment)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <VerticalAlignment>Bottom</VerticalAlignment>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>62</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
+                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="adControl" d:IsOptimized="True"/>
                     </Storyboard>
                 </VisualState>
                 <VisualState x:Name="Filled">
@@ -131,7 +110,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="Countdown">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>312,149,313,250</Thickness>
+                                    <Thickness>406,0,219,303</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -143,28 +122,6 @@
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="Countdown">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>NaN</x:Double>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="adControl" d:IsOptimized="True"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>386,668,388,0</Thickness>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="adControl">
-                            <DiscreteObjectKeyFrame KeyTime="0">
-                                <DiscreteObjectKeyFrame.Value>
-                                    <HorizontalAlignment>Stretch</HorizontalAlignment>
-                                </DiscreteObjectKeyFrame.Value>
-                            </DiscreteObjectKeyFrame>
-                        </ObjectAnimationUsingKeyFrames>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="adControl">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
                                     <x:Double>NaN</x:Double>
@@ -188,11 +145,11 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="untilTxtBlock">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>406,518,388,175</Thickness>
+                                    <Thickness>534,610,260,82</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" To="48" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="untilTxtBlock" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="untilTxtBlock" d:IsOptimized="True" To="48"/>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="untilTxtBlock">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
@@ -203,10 +160,32 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>463,598,477,130</Thickness>
+                                    <Thickness>603,690,337,37</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="adControl">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <x:Double>493</x:Double>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="adControl">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <x:Double>647</x:Double>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Thickness>406,34,368,672</Thickness>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="adControl" d:IsOptimized="True"/>
                     </Storyboard>
                 </VisualState>
 
@@ -237,7 +216,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="textBlock">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>125,637,125,85</Thickness>
+                                    <Thickness>125,587,125,135</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -258,7 +237,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="Countdown">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>50,223,56,263</Thickness>
+                                    <Thickness>50,0,56,329</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -279,7 +258,7 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="untilTxtBlock">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>78,575,29,134</Thickness>
+                                    <Thickness>78,539,29,170</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
@@ -290,19 +269,26 @@
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="Countdown" d:IsOptimized="True" To="48"/>
-                        <DoubleAnimation Duration="0" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="untilTxtBlock" d:IsOptimized="True" To="36"/>
-                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="adControl">
+                        <DoubleAnimation Duration="0" To="48" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="Countdown" d:IsOptimized="True"/>
+                        <DoubleAnimation Duration="0" To="36" Storyboard.TargetProperty="(TextBlock.FontSize)" Storyboard.TargetName="untilTxtBlock" d:IsOptimized="True"/>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Left)" Storyboard.TargetName="adControl">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <x:Double>300</x:Double>
+                                    <x:Double>41</x:Double>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Canvas.Top)" Storyboard.TargetName="adControl">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <x:Double>677</x:Double>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="adControl">
                             <DiscreteObjectKeyFrame KeyTime="0">
                                 <DiscreteObjectKeyFrame.Value>
-                                    <Thickness>10,642,0,0</Thickness>
+                                    <Thickness>41,683,29,23</Thickness>
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
